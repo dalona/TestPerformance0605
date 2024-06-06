@@ -1,0 +1,170 @@
+{
+  "Flight": [
+    {
+      "id": "",
+      "number": "",
+      "origin": "",
+      "destination": "",
+      "departure": "",
+      "arrival": "",
+      "capacity": ""
+    }
+  ],
+  "Role": [
+    {
+      "roleid": "",
+      "rol": "",
+      "email": "",
+      "password": "",
+      "id": "a73b"
+    },
+    {
+      "id": "",
+      "rol": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "05e7",
+      "name": "",
+      "email": "",
+      "birthday": "",
+      "password": "",
+      "role": ""
+    },
+    {
+      "id": "3e11",
+      "email": "daasd@gmail.com",
+      "password": "adad"
+    }
+  ],
+  "User": [
+    {
+      "id": "",
+      "name": "",
+      "email": "",
+      "birthdate": "",
+      "password": "",
+      "roleid": ""
+    },
+    {
+      "id": "c74a",
+      "email": "danielito@example.com",
+      "password": "riwi123"
+    },
+    {
+      "id": "15d0",
+      "email": "niconico@example.com",
+      "password": "riwi"
+    },
+    {
+      "id": "f6fb",
+      "name": "",
+      "email": "",
+      "birthday": "",
+      "password": "",
+      "role": ""
+    },
+    {
+      "id": "600f",
+      "name": "",
+      "email": "",
+      "birthday": "",
+      "password": "",
+      "role": ""
+    },
+    {
+      "id": "c01a",
+      "email": "esoeso@example.com",
+      "password": "deusmeu"
+    },
+    {
+      "id": "2ef3",
+      "name": "",
+      "email": "",
+      "birthday": "",
+      "password": "",
+      "role": ""
+    },
+    {
+      "id": "392f",
+      "email": "oead@example.com",
+      "password": "adadd"
+    },
+    {
+      "id": "7014",
+      "email": "hector@example.com",
+      "password": "santi"
+    },
+    {
+      "id": "9c17",
+      "email": "dadsa@as",
+      "password": "dasasd"
+    },
+    {
+      "id": "2828",
+      "email": "asdasd@belen",
+      "password": "adasd"
+    },
+    {
+      "id": "d9b7",
+      "email": "sadad@dad",
+      "password": "sdad"
+    },
+    {
+      "id": "ed1a",
+      "name": "",
+      "email": "",
+      "birthday": "",
+      "password": "",
+      "role": ""
+    },
+    {
+      "id": "17cd",
+      "name": "",
+      "email": "",
+      "birthday": "",
+      "password": "",
+      "role": ""
+    },
+    {
+      "id": "ec2e",
+      "email": "dasdd@dad.com",
+      "password": "asdas"
+    },
+    {
+      "id": "301e",
+      "name": "",
+      "email": "",
+      "birthday": "",
+      "password": "",
+      "role": ""
+    },
+    {
+      "id": "55f6",
+      "name": "",
+      "email": "",
+      "birthday": "",
+      "password": "",
+      "role": ""
+    },
+    {
+      "id": "268b",
+      "name": "",
+      "email": "",
+      "birthday": "",
+      "password": "",
+      "role": ""
+    }
+  ],
+  "Booking": [
+    {
+      "id": "",
+      "flightId": "",
+      "userId": "",
+      "bookingDate": "",
+      "password": "",
+      "roleid": ""
+    }
+  ]
+}
