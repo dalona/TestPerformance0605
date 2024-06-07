@@ -32,7 +32,7 @@ const $LoginForm = document.getElementsByTagName('form')[0]
             alert("All fields are required")
         }
 
-        const token = ($userEmail, $userPassword);
+        const token = Math.random().toString(36).substring(2);
 
     if (token) {
       localStorage.setItem('token', token);

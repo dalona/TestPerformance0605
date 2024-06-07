@@ -52,40 +52,48 @@ export async function RegisterPage() {
         if (!$userName.value || !$userEmail.value || !$birthday.value || !$userPassword.value || !$roles) {
             alert('All fields are required')
         }
-    })
 
-    //fetch
-
-    const userCreated = await fetch('http://localhost:3000/User', {
-
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            name: $userName.value,
-            email: $userEmail.value,
-            birthday: $birthday.value,
-            password: $userPassword.value,
-            role: $roles.value
-        })
+        //fetch
         
+        const userCreated = await fetch('http://localhost:3000/User', {
+
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "name": $userName.value,
+                "email": $userEmail.value,
+                "birthday": $birthday.value,
+                "password": $userPassword.value,
+                "role": $roles.value
+            })
+
+        })
+
+
+        if (!userCreated.ok) {
+            alert("Error creating user")
+            return
+        }
+
+        alert("User Created successfully")
+        navigateTo('/login')
+
+
     })
 
-    
-    if(!userCreated.ok){
-        alert("Error creating user")
-        return
-    }
 
-    // alert("User Created successfully")
-    // navigateTo('/login')
 }
 
-export function emailValidator(){
+export function emailValidator() {
     $userEmail.addEventListener('input', () => {
         if (!$userEmail.value.includes('@' || ".")) {
             alert('The email must include an "@" or a "."')
         }
     })
 }
+
+
+//El fetch me duvuelve una promesa. Pero en vez de gestionarla con el .then uso un await 
+// que me va a hacer el await para la ejecucion de esto  hasta que me resuelva la promesa la promesa

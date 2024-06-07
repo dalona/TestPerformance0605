@@ -1,4 +1,4 @@
-export function CreateFlights(){
+export async function CreateFlights(){
     const root = document.getElementById('root');
     root.innerHTML = `
     <h1>Create Flights</h1>
@@ -33,6 +33,47 @@ export function CreateFlights(){
 
 
     `
+
+    //logic
+
+    const $createFlights = document.getElementsByTagName('form')[0]
+    const $fligthNumber = document.getElementsByTagName('input')[0]
+    const $origin = document.getElementsByTagName('input')[1]
+    const $destination = document.getElementsByTagName('input')[2]
+    const $departure = document.getElementsByTagName('input')[3]
+    const $arrival = document.getElementsByTagName('input')[4]
+    console.log($createFlights)
+    $createFlights.addEventListener('submit', async (e) => {
+        e.preventDefault()
+
+        if (!$fligthNumber || !$origin || !$destination || !$departure || !$arrival) {
+            alert('All fields are required')
+        }
+
+            //fetch
+
+    const flightCreated = await fetch('http://localhost:3000/Flight',{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "flightNumber": $fligthNumber.value,
+            "origin": $origin.value,
+            "destination": $destination.value,
+            "departure": $departure.value,
+            "arrival": $arrival.value
+        })
+    })
+    
+    if (!flightCreated.ok) {
+        alert("Error creating user")
+        return
+    }
+
+    alert("Flight Created successfully")
+    })
+
 }
 
 // <form>
